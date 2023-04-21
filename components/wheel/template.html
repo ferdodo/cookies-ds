@@ -1,0 +1,41 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	#wheel {
+		height: 100%;
+		min-height: 0.5rem;
+		/*background-image: url('img/wheel.png');*/
+		background-size: 100% 100%;
+		transition: filter 0.3s cubic-bezier(.08,.82,.17,1);
+		display: grid;
+		grid-template-columns: 0.55fr 0.5fr 0.6fr 0.5fr 0.4fr 0.4fr 0.2fr;
+		grid-template-rows: 0.4fr 1fr 0.5fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px; 
+	}
+
+	#number-1 {
+		grid-area: 2 / 2 / 3 / 3;
+		background-size: 100% 100%;
+		opacity: 0.5;
+	}
+
+	#number-2 {
+		grid-area: 2 / 4 / 3 / 5;
+		background-size: 100% 100%;
+	}
+
+	#number-3 {
+		grid-area: 2 / 6 / 3 / 7;
+		background-size: 100% 100%;
+		opacity: 0.5;
+	}
+</style>
+
+<div id="wheel">
+	<div id="number-1"></div>
+	<div id="number-2"></div>
+	<div id="number-3"></div>
+</div>

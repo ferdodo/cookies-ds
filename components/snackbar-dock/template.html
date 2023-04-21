@@ -1,0 +1,55 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	p {
+		font-family: ds-poetsen-one;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		color: black;
+		user-select: none;
+	}
+
+	#snackbar-container {
+		position: absolute;
+		left: 0;
+		top: -8rem;
+		transition: .15s top cubic-bezier(.22,.61,.36,1);
+		cursor: pointer;
+	}
+
+	#snackbar-container.down {
+		top: 0;
+	}
+
+	#snackbar-container.down:hover {
+		top: -0.3rem;
+	}
+
+	#snackbar-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		height: 7.5rem;
+		width: 100vw;
+	}
+
+	#snackbar-content > div {
+		grid-area: 1 / 1 / 2 / 2;
+		background-color: transparent;
+	}
+</style>
+
+<div id="snackbar-container">
+	<div id="snackbar-content">
+		<div>
+			<svg width="100vw" height="7.5rem" viewBox="50 40 50 30" preserveAspectRatio="none">
+		    	<path d="m 50,40 h 50 V 70 C 90,60 60,60 50,70 Z" style="fill:#ffd920;"/>
+			</svg>
+		</div>
+		<div style="padding: 0.1rem; text-align: center;"><p id="snackbar-text"> </p></div>
+	</div>	
+</div>

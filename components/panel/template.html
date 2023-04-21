@@ -1,0 +1,58 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	#panel-container {
+		display: grid;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		transition: grid-template-columns .5s cubic-bezier(.12,1.03,.11,.99), grid-template-rows .5s cubic-bezier(.12,1.03,.11,.99);
+		height: 100%;
+	}
+
+	#panel {
+		backdrop-filter: blur(0.3rem);
+		border-radius: 0.3rem;
+		padding: 1.7rem;
+		grid-area: 2 / 2 / 3 / 3;
+		background-color: #ffffff00;
+		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);
+		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);
+		color: black;
+		overflow: auto;
+	}
+
+	#panel-content {
+		visibility: collapse;
+		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);
+		overflow: hidden;
+	}
+
+	* {
+		scrollbar-width: auto;
+		scrollbar-color: #ffffff90 #ffffff00;
+	}
+
+	*::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: #ffffff00;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #ffffff90;
+		border-radius: 10px;
+		border: 3px solid #ffffff00;
+	}
+</style>
+
+<div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">
+	<div id="panel">
+		<div id="panel-content" style="opacity: 0;">
+			<slot></slot>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	input {
+		font-family: ds-notes-sans;
+		font-size: 1rem;
+		background-color: transparent;
+		border-radius: 0.5rem;
+		border-color: black;
+		border-style: solid;
+		padding: 0.4rem;
+		border-width: 0.15rem;
+	}
+
+	@media screen and (min-width: 800px) {
+		input {
+			font-size: 1.4rem;
+		}
+	}
+
+	input:focus, input:focus-visible {
+		outline: none;
+	}
+</style>
+
+<input type="datetime-local">

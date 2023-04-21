@@ -1,0 +1,53 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	#breadcrumbs {
+		font-family: ds-notes-sans;
+		font-size: 1rem;
+		display: flex;
+		color: black;
+	}
+
+	@media screen and (min-width: 800px) {
+		#breadcrumbs {
+			font-size: 1.4rem;
+		}
+	}
+
+	::slotted(*)::before {
+	    content: '›';
+		margin-right: 0.9rem;
+		margin-left: 0.9rem;
+		font-weight: 900;
+		display:inline-block;
+		text-decoration: none;
+		cursor: initial;
+	}
+
+	::slotted(*:first-child)::before {
+	    content: none;
+	}
+
+	::slotted(*) {
+	    opacity: 0.5;
+	}
+
+	::slotted(*:hover) {
+	    text-decoration: underline;
+	    cursor: pointer;
+	}
+
+	::slotted(*:last-child) {
+		opacity: 1;
+	    font-weight: 900;
+	}
+
+	::slotted(*:hover:last-child) {
+	    text-decoration: none;
+	   	cursor: initial;
+	}
+</style>
+
+<div id="breadcrumbs"><slot></slot></div>

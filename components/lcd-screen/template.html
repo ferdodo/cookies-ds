@@ -1,0 +1,55 @@
+<style>
+	:host {
+		display: block;
+	}
+
+	div {
+		height: 100%;
+	}
+
+	#lcd-screen {
+		background: rgb(198,215,188);
+		background: linear-gradient(166deg, rgb(164, 204, 140) 0%, rgb(57, 98, 34) 100%);
+		border: 0.3rem inset #4a4a4a;
+	}
+
+	#backlight {
+		opacity: 0.8;
+		background: rgb(0,213,255);
+		background: linear-gradient(0deg, rgba(0,213,255,1) 0%, rgba(16,130,254,1) 100%);
+		
+	}
+
+	#backlight-halo-left {
+		background: rgb(101,101,101);
+		background: linear-gradient(90deg, rgba(101,101,101,1) 0%, rgba(0,213,255,1) 3%, rgba(16,130,254,0) 15%);
+	}
+
+	#backlight-halo-right {
+		background: rgb(0,213,255);
+		background: linear-gradient(270deg, rgba(101,101,101,1) 0%, rgba(0,213,255,1) 3%, rgba(16,130,254,0) 15%);
+	}
+
+	#backlight-halo-up {
+		background: rgb(0,213,255);
+		background: linear-gradient(180deg, rgba(101,101,101,1) 0%, rgba(0,213,255,1) 3%, rgba(16,130,254,0) 15%);
+	}
+
+	#backlight-halo-down {
+		background: rgb(0,213,255);
+		background: linear-gradient(0deg, rgba(101,101,101,1) 0%, rgba(0,213,255,1) 3%, rgba(16,130,254,0) 15%);
+	}
+</style>
+
+<div id="lcd-screen">
+	<div id="backlight">
+		<div id="backlight-halo-left">
+			<div id="backlight-halo-right">
+				<div id="backlight-halo-up">
+					<div id="backlight-halo-down">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
