@@ -11,7 +11,8 @@
     "**/*.{ts}"
   ],
   "excludes": [
-    "**/node_modules"
+    "**/node_modules",
+    "**/dist"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.81.1.wasm"
