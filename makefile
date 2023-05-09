@@ -17,28 +17,28 @@ all: $(DIST)
 static: $(STATIC) 
 
 dist/%.js: %.png
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.png=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.png=dataurl --format=esm $^ --outfile=$@
 
 dist/%.js: %.ttf
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.ttf=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.ttf=dataurl --format=esm $^ --outfile=$@
 
 dist/%.js: %.otf
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.otf=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.otf=dataurl --format=esm $^ --outfile=$@
 
 dist/%.js: %.html
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.html=text --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.html=text --format=esm $^ --outfile=$@
 
 %.js: %.png
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.png=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.png=dataurl --format=esm $^ --outfile=$@
 
 %.js: %.ttf
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.ttf=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.ttf=dataurl --format=esm $^ --outfile=$@
 
 %.js: %.otf
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.otf=dataurl --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.otf=dataurl --format=esm $^ --outfile=$@
 
 %.js: %.html
-	./node_modules/esbuild/bin/esbuild --sourcemap --loader:.html=text --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --loader:.html=text --format=esm $^ --outfile=$@
 
 dist/%.js: %.ts
-	./node_modules/esbuild/bin/esbuild --sourcemap --format=esm $^ --outfile=$@
+	./node_modules/esbuild/bin/esbuild --format=esm $^ --outfile=$@
