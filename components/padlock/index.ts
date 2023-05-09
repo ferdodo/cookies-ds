@@ -1,9 +1,9 @@
-import template from "./template";
+import template from "./template.js";
 import { Observable, fromEvent, merge, map, Subscription } from "rxjs";
-import padlockBodyDataUrl from "./img/padlock-body";
-import padlockShackleDataUrl from "./img/padlock-shackle";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { getElement } from "../../utils/get-element";
+import padlockBodyDataUrl from "./img/padlock-body.js";
+import padlockShackleDataUrl from "./img/padlock-shackle.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { getElement } from "../../utils/get-element.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

@@ -1,7 +1,7 @@
-import template from "./template";
-import digitalFont from "./fonts/digital";
-import { getElement } from "../../utils/get-element";
-import { getShadowRoot } from "../../utils/get-shadow-root";
+import template from "./template.js";
+import digitalFont from "./fonts/digital.js";
+import { getElement } from "../../utils/get-element.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

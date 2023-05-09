@@ -1,9 +1,9 @@
-import template from "./template";
+import template from "./template.js";
 import { Observable, combineLatest, interval, tap, map, Subscription } from "rxjs";
-import cookieImg from "./img/cookie";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { acquireAnimationLock } from "../../utils/animation-lock";
-import { primaryColor } from "../../colors";
+import cookieImg from "./img/cookie.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { acquireAnimationLock } from "../../utils/animation-lock.js";
+import { primaryColor } from "../../colors.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

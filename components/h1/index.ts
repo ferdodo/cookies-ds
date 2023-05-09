@@ -1,6 +1,6 @@
-import template from "./template";
-import { notesSansLoaded } from "../../fonts";
-import { getShadowRoot } from "../../utils/get-shadow-root";
+import template from "./template.js";
+import { notesSansLoaded } from "../../fonts/index.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

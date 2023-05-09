@@ -1,7 +1,7 @@
-import template from "./template";
+import template from "./template.js";
 import { fromEvent, merge, map, Observable, Subscription } from "rxjs";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { getElement } from "../../utils/get-element";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { getElement } from "../../utils/get-element.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

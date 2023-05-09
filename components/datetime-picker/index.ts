@@ -1,7 +1,7 @@
-import template from "./template";
-import { notesSansLoaded } from "../../fonts";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { getElement } from "../../utils/get-element";
+import template from "./template.js";
+import { notesSansLoaded } from "../../fonts/index.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { getElement } from "../../utils/get-element.js";
 import { fromEvent, Subscription } from "rxjs";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");

@@ -1,7 +1,7 @@
-import template from "./template";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { getElement } from "../../utils/get-element";
-import { copyAttribute } from "../../utils/copy-attribute";
+import template from "./template.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { getElement } from "../../utils/get-element.js";
+import { copyAttribute } from "../../utils/copy-attribute.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

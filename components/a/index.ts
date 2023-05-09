@@ -1,9 +1,9 @@
-import template from "./template";
-import { notesSansLoaded } from "../../fonts";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { linkColor, linkVisitedColor } from "../../colors";
-import { copyAttribute } from "../../utils/copy-attribute";
-import { getElement } from "../../utils/get-element";
+import template from "./template.js";
+import { notesSansLoaded } from "../../fonts/index.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { linkColor, linkVisitedColor } from "../../colors.js";
+import { copyAttribute } from "../../utils/copy-attribute.js";
+import { getElement } from "../../utils/get-element.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

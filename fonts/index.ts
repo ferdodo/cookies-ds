@@ -1,5 +1,5 @@
-import notesSansBase64 from "./notes-sans";
-import poetsenOneBase64 from "./poetsen-one";
+import notesSansBase64 from "./notes-sans.js";
+import poetsenOneBase64 from "./poetsen-one.js";
 
 async function loadNotesSans() {
 	const font: FontFace = new FontFace("ds-notes-sans", `url('${notesSansBase64}')`);

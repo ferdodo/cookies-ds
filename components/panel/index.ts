@@ -1,8 +1,8 @@
-import template from "./template";
-import { getElement } from "../../utils/get-element";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { appReady } from "../../utils/app-ready";
-import { acquireAnimationLock } from "../../utils/animation-lock";
+import template from "./template.js";
+import { getElement } from "../../utils/get-element.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { appReady } from "../../utils/app-ready.js";
+import { acquireAnimationLock } from "../../utils/animation-lock.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;

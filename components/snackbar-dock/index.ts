@@ -1,7 +1,7 @@
-import template from "./template";
-import { poetsenOneLoaded } from "../../fonts";
-import { getShadowRoot } from "../../utils/get-shadow-root";
-import { getElement } from "../../utils/get-element";
+import template from "./template.js";
+import { poetsenOneLoaded } from "../../fonts/index.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
+import { getElement } from "../../utils/get-element.js";
 import { Subject, Observable, Subscription, fromEvent } from "rxjs";
 
 interface Snackbar {

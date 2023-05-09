@@ -1,4 +1,4 @@
-import faviconBase64 from "./favicon";
+import faviconBase64 from "./favicon.js";
 
 function getOrCreateLink(): HTMLLinkElement {
 	const link = document.querySelector("link[rel*='icon']");

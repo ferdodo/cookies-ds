@@ -1,5 +1,5 @@
-import template from "./template";
-import { getShadowRoot } from "../../utils/get-shadow-root";
+import template from "./template.js";
+import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
