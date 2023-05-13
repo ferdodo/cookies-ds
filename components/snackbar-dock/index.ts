@@ -4,6 +4,14 @@ import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { getElement } from "../../utils/get-element.js";
 import { Subject, Observable, Subscription, fromEvent } from "rxjs";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-snackbar-dock": {};
+		}
+	}
+}
+
 interface Snackbar {
 	message: string;
 }

@@ -3,6 +3,14 @@ import digitalFont from "./fonts/digital.js";
 import { getElement } from "../../utils/get-element.js";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-padlock-screen": { "release-timestamp"?: string };
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

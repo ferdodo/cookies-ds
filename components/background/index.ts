@@ -5,6 +5,14 @@ import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { acquireAnimationLock } from "../../utils/animation-lock.js";
 import { primaryColor } from "../../colors.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-background": {};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

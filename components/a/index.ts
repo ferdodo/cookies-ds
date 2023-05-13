@@ -5,6 +5,14 @@ import { linkColor, linkVisitedColor } from "../../colors.js";
 import { copyAttribute } from "../../utils/copy-attribute.js";
 import { getElement } from "../../utils/get-element.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-a": {};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

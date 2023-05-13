@@ -3,6 +3,20 @@ import { fromEvent, merge, map, Observable, Subscription } from "rxjs";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { getElement } from "../../utils/get-element.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-smart-padlock": {
+				locked?: boolean;
+				lockable?: boolean;
+				code?: string;
+				unlockable?: boolean;
+				"release-timestamp"?: string;
+			};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

@@ -5,6 +5,14 @@ import padlockShackleDataUrl from "./img/padlock-shackle.js";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { getElement } from "../../utils/get-element.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-padlock": { locked?: boolean; lockable?: boolean };
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

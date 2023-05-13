@@ -3,6 +3,14 @@ import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { getElement } from "../../utils/get-element.js";
 import { copyAttribute } from "../../utils/copy-attribute.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-info": { "visited"?: boolean };
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

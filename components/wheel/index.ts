@@ -14,6 +14,14 @@ import wheelImg from "./img/wheel.js";
 import { getElement } from "../../utils/get-element.js";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-wheel": { unlockable?: boolean; number?: string };
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

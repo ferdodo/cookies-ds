@@ -4,6 +4,14 @@ import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { getElement } from "../../utils/get-element.js";
 import { fromEvent, Subscription } from "rxjs";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-datetime-picker": {};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

@@ -4,6 +4,14 @@ import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { appReady } from "../../utils/app-ready.js";
 import { acquireAnimationLock } from "../../utils/animation-lock.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-panel": {};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 

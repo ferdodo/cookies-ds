@@ -2,6 +2,14 @@ import template from "./template.js";
 import { notesSansLoaded } from "../../fonts/index.js";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 
+declare global {
+	export namespace JSX {
+		export interface IntrinsicElements {
+			"cookies-p": {};
+		}
+	}
+}
+
 const templateNode: HTMLTemplateElement = document.createElement("template");
 templateNode.innerHTML = template;
 
