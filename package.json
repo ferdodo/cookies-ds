@@ -15,7 +15,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "zx ./scripts/build.mjs",
-		"start": "nodemon --exec make"
+		"start": "nodemon -e ts,html,js,otf,ttf --exec make"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.49.0",
