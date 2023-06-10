@@ -12,6 +12,7 @@ import { DatetimePicker } from "./components/datetime-picker/index.js";
 import { Breadcrumbs } from "./components/breadcrumbs/index.js";
 import { SnackbarDock } from "./components/snackbar-dock/index.js";
 import { A } from "./components/a/index.js";
+import { Button } from "./components/button/index.js";
 
 export { enqueueSnackbar } from "./components/snackbar-dock/index.js";
 export { setFavicon } from "./set-favicon.js";
@@ -30,7 +31,8 @@ const componentDefinitions = new Map<string, CustomElementConstructor>()
 	.set("cookies-datetime-picker", DatetimePicker)
 	.set("cookies-breadcrumbs", Breadcrumbs)
 	.set("cookies-snackbar-dock", SnackbarDock)
-	.set("cookies-a", A);
+	.set("cookies-a", A)
+	.set("cookies-button", Button);
 
 for (const [name, element] of componentDefinitions) {
 	customElements.define(name, element);
