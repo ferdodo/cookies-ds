@@ -20,6 +20,11 @@ templateNode.innerHTML = template;
 
 export class Button extends HTMLElement {
 	clickSubscription: Subscription | null = null;
+	confetti: boolean = false;
+
+	static get observedAttributes() {
+		return ["confetti"];
+	}
 
 	async connectedCallback() {
 		await notesSansLoaded;
@@ -27,14 +32,20 @@ export class Button extends HTMLElement {
 		const shadowRoot = getShadowRoot(this);
 		shadowRoot.appendChild(templateNode.content.cloneNode(true));
 		const button = getElement(shadowRoot, "button");
-		const confetti: string | null = this.getAttribute("confetti");
+		this.confetti = this.getAttribute("confetti") !== null;
 
-		if (confetti !== null) {
-			const clickObservable = fromEvent(button, "click")
-				.pipe(throttleTime(100), take(7));
+		const clickObservable = fromEvent(button, "click")
+			.pipe(throttleTime(100), take(7));
 
-			this.clickSubscription = clickObservable.subscribe(() => throwConfetti());
-		}
+		this.clickSubscription = clickObservable.subscribe(() => {
+			if (this.confetti) {
+				throwConfetti();
+			}
+		});
+	}
+
+	attributeChangedCallback() {
+		this.confetti = this.getAttribute("confetti") !== null;
 	}
 
 	disconnectedCallback() {
