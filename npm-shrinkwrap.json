@@ -1,13 +1,16 @@
 {
 	"name": "cookies-ds",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"lockfileVersion": 2,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "cookies-ds",
-			"version": "1.0.3",
+			"version": "1.0.5",
 			"license": "MIT",
+			"dependencies": {
+				"canvas-confetti": "^1.6.0"
+			},
 			"devDependencies": {
 				"@typescript-eslint/eslint-plugin": "^5.49.0",
 				"@typescript-eslint/eslint-plugin-tslint": "^5.49.0",
@@ -1189,6 +1192,15 @@
 			"dev": true,
 			"engines": {
 				"node": ">=6"
+			}
+		},
+		"node_modules/canvas-confetti": {
+			"version": "1.6.0",
+			"resolved": "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.6.0.tgz",
+			"integrity": "sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==",
+			"funding": {
+				"type": "donate",
+				"url": "https://www.paypal.me/kirilvatev"
 			}
 		},
 		"node_modules/caseless": {
@@ -5275,6 +5287,11 @@
 			"resolved": "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz",
 			"integrity": "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==",
 			"dev": true
+		},
+		"canvas-confetti": {
+			"version": "1.6.0",
+			"resolved": "https://registry.npmjs.org/canvas-confetti/-/canvas-confetti-1.6.0.tgz",
+			"integrity": "sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA=="
 		},
 		"caseless": {
 			"version": "0.12.0",
