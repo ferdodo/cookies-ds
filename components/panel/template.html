@@ -12,7 +12,6 @@
 	}
 
 	#panel {
-		backdrop-filter: blur(0.3rem);
 		border-radius: 0.3rem;
 		padding: 1.7rem;
 		grid-area: 2 / 2 / 3 / 3;
@@ -21,12 +20,39 @@
 		transition: background-color .5s cubic-bezier(.12,1.03,.11,.99);
 		color: black;
 		overflow: auto;
+		position: relative;
 	}
 
 	#panel-content {
 		visibility: collapse;
 		transition: opacity 1s cubic-bezier(.12,1.03,.11,.99);
 		overflow: hidden;
+		z-index: 1;
+		position: relative;
+	}
+
+	#panel-loading-container {
+		grid-area: 2 / 2 / 3 / 3;
+		overflow: hidden;
+		backdrop-filter: blur(0.3rem);
+	}
+
+	#panel-loading {
+		border-radius: 0.3rem;
+		width: 75%;
+		height: 100%;
+		background-color: #ffffff55;
+		box-shadow: 0px 0px 9px 5px rgba(28, 44, 83, 0.04);
+
+		transition-duration: 1s;
+		transition-timing-function: cubic-bezier(.17,.84,.44,1);
+		transition-delay: 0s;
+		transition-property: width, background-color;
+
+		color: black;
+		overflow: auto;
+
+		position: relative;
 	}
 
 	* {
@@ -50,6 +76,10 @@
 </style>
 
 <div id="panel-container" style="grid-template-columns: 20% 1fr 20%; grid-template-rows: 1rem 1fr 40%;">
+	<div id="panel-loading-container">
+		<div id="panel-loading"></div>
+	</div>
+
 	<div id="panel">
 		<div id="panel-content" style="opacity: 0;">
 			<slot></slot>
