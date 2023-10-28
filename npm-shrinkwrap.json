@@ -1,12 +1,12 @@
 {
 	"name": "cookies-ds",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"lockfileVersion": 2,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "cookies-ds",
-			"version": "1.0.7",
+			"version": "1.0.8",
 			"license": "MIT",
 			"dependencies": {
 				"canvas-confetti": "^1.6.0"
