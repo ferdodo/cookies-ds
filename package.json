@@ -1,6 +1,6 @@
 {
 	"name": "cookies-ds",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"type": "module",
 	"main": "dist/main.js",
 	"repository": {
@@ -21,7 +21,6 @@
 		"@typescript-eslint/eslint-plugin": "^5.49.0",
 		"@typescript-eslint/eslint-plugin-tslint": "^5.49.0",
 		"@typescript-eslint/parser": "^5.49.0",
-		"async-mutex": "^0.4.0",
 		"dprint": "^0.34.4",
 		"esbuild": "^0.17.3",
 		"eslint": "^8.33.0",
@@ -32,6 +31,7 @@
 		"zx-run-task": "^1.0.2"
 	},
 	"dependencies": {
+		"async-mutex": "^0.4.0",
 		"canvas-confetti": "^1.6.0"
 	}
 }
