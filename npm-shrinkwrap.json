@@ -1,12 +1,12 @@
 {
 	"name": "cookies-ds",
-	"version": "1.0.10",
+	"version": "1.2.0",
 	"lockfileVersion": 2,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "cookies-ds",
-			"version": "1.0.10",
+			"version": "1.2.0",
 			"license": "MIT",
 			"dependencies": {
 				"async-mutex": "^0.4.0",

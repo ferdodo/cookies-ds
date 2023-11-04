@@ -81,6 +81,8 @@ export class Panel extends HTMLElement {
 
 			if (loading !== null && isLoadingValid(loading)) {
 				this.loading = loading;
+			} else if (loading === null) {
+				this.loading = "100";
 			}
 
 			this.render();
