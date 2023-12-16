@@ -22,7 +22,7 @@ export class Panel extends HTMLElement {
 	loading: string = "100";
 
 	static get observedAttributes() {
-		return ["loading"];
+		return ["loading", "panel-title"];
 	}
 
 	async connectedCallback() {
@@ -61,11 +61,12 @@ export class Panel extends HTMLElement {
 		const panelContent: HTMLElement = getElement(shadowRoot, "#panel-content");
 		const panelLoading: HTMLElement = getElement(shadowRoot, "#panel-loading");
 		const panel: HTMLElement = getElement(shadowRoot, "#panel");
+		const panelTitleContent: HTMLElement = getElement(shadowRoot, "#panel-title-content");
 
 		if (this.contentTimeoutElapsed && isLoaded(this.loading)) {
 			panelContent.style.visibility = "visible";
 			panelContent.style.opacity = "1";
-			panel.style.overflow = "auto";
+			panel.style.overflow = "auto";	
 		} else {
 			panelContent.style.visibility = "collapse";
 			panelContent.style.opacity = "0";
@@ -73,6 +74,19 @@ export class Panel extends HTMLElement {
 		}
 
 		panelLoading.style.width = `${this.loading}%`;
+
+		const panelTitle: HTMLElement = getElement(shadowRoot, "#panel-title");
+
+		if (this.loading === "100" && this.getAttribute("panel-title")) {
+			setTimeout(() => {
+				panelTitle.style.opacity = "1";
+				panelTitleContent.innerHTML = this.getAttribute("panel-title");
+				panelContent.style.paddingTop = "2.5rem";
+			}, 10);
+		} else {
+			panelContent.style.paddingTop = "inherit";
+			panelTitle.style.opacity = "0";
+		}
 	}
 
 	attributeChangedCallback() {
