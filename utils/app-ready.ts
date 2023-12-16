@@ -23,13 +23,18 @@ function visibleAndFocusedObservable(): Observable<boolean> {
 		);
 }
 
+const mouseOverDocument$ = fromEvent(document, "mouseover");
+
 async function waitVisible() {
 	if (isWindowVisible()) {
 		return;
 	}
 
-	await visibleAndFocusedObservable()
-		.toPromise();
+	await Promise.race([
+		visibleAndFocusedObservable()
+			.toPromise(),
+		mouseOverDocument$.toPromise()
+	]);
 }
 
 async function waitAppReady() {
