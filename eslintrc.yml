@@ -7,26 +7,26 @@ ignorePatterns:
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/eslint-recommended
-#  - plugin:rxjs/recommended
+  - plugin:rxjs/recommended
 rules:
-  max-lines: 2
-  no-debugger: 2
+  max-lines: "error"
+  no-debugger: "error"
   no-console:
-    - 2
+    - "error"
     -
       allow:
         - "error"
         - "warn"
   newline-per-chained-call:
-    - 2
+    - "error"
     -
       ignoreChainWithDepth: 1
   "@typescript-eslint/tslint/config":
     - "warn"
     - rules:
-        no-floating-promises: 2
-#  rxjs/no-async-subscribe: 2
-#  rxjs/no-ignored-observable: 2
-#  rxjs/no-ignored-subscription: 2
-#  rxjs/no-unbound-methods: 2
-#  rxjs/throw-error: 2
+        no-floating-promises: "error"
+  rxjs/no-async-subscribe: "error"
+  rxjs/no-ignored-observable: "error"
+  rxjs/no-ignored-subscription: "error"
+  rxjs/no-unbound-methods: "error"
+  rxjs/throw-error: "error"
