@@ -66,7 +66,7 @@ export class Panel extends HTMLElement {
 		if (this.contentTimeoutElapsed && isLoaded(this.loading)) {
 			panelContent.style.visibility = "visible";
 			panelContent.style.opacity = "1";
-			panel.style.overflow = "auto";	
+			panel.style.overflow = "auto";
 		} else {
 			panelContent.style.visibility = "collapse";
 			panelContent.style.opacity = "0";
@@ -80,7 +80,7 @@ export class Panel extends HTMLElement {
 		if (this.loading === "100" && this.getAttribute("panel-title")) {
 			setTimeout(() => {
 				panelTitle.style.opacity = "1";
-				panelTitleContent.innerHTML = this.getAttribute("panel-title");
+				panelTitleContent.innerHTML = this.getAttribute("panel-title") || "";
 				panelContent.style.paddingTop = "2.5rem";
 			}, 10);
 		} else {

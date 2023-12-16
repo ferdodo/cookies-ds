@@ -1,0 +1,13 @@
+plugins:
+  - '@html-eslint'
+overrides:
+  - files:
+      - '*.html'
+    parser: '@html-eslint/parser'
+    extends:
+      - "plugin:@html-eslint/recommended"
+    rules:
+      "@html-eslint/no-duplicate-attrs": "error"
+      "@html-eslint/indent":
+        - "error"
+        - "tab"

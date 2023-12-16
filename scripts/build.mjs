@@ -11,6 +11,15 @@ await runTask('Lint code', $`
 		--ext .ts .
 `);
 
+await runTask('Lint html', $`
+	npx --no-install eslint \
+		--max-warnings 0 \
+		--parser @html-eslint/parser \
+		--plugin @html-eslint \
+		--config eslint-html.yml \
+		--ext .html .
+`);
+
 await runTask('Check code formatting', $`npx --no-install dprint check`);
 await runTask('Transpile for bundler', $`tsc`);
 
