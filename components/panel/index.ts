@@ -3,6 +3,7 @@ import { getElement } from "../../utils/get-element.js";
 import { getShadowRoot } from "../../utils/get-shadow-root.js";
 import { appReady } from "../../utils/app-ready.js";
 import { acquireAnimationLock } from "../../utils/animation-lock.js";
+import { fromEvent, map, Subscription } from "rxjs";
 
 declare global {
 	export namespace JSX {
@@ -23,6 +24,8 @@ export class Panel extends HTMLElement {
 	contentLoaded: boolean = false;
 	connected: boolean = false;
 	loading: string = "100";
+	scrolled: boolean = false;
+	scrolledSubscription: Subscription | null = null;
 
 	static get observedAttributes() {
 		return ["loading", "panel-title"];
@@ -46,6 +49,19 @@ export class Panel extends HTMLElement {
 			panelContainer.style.gridTemplateRows = "1rem 1fr 1rem";
 			const panel: HTMLElement = getElement(shadowRoot, "#panel");
 			panel.style.backgroundColor = "#ffffff40";
+
+			this.scrolledSubscription = fromEvent(panel, "scroll")
+				.pipe(
+					map((e: Event) => (e.target as HTMLElement).scrollTop),
+					// startWith(0),
+					map(scrollTop => scrollTop !== 0)
+					// distinctUntilChanged()
+				)
+				.subscribe(value => {
+					this.scrolled = value;
+					this.render();
+				});
+
 			this.render();
 		}, 10);
 
@@ -80,7 +96,7 @@ export class Panel extends HTMLElement {
 
 		const panelTitle: HTMLElement = getElement(shadowRoot, "#panel-title");
 
-		if (this.loading === "100" && this.getAttribute("panel-title")) {
+		if (this.loading === "100" && this.getAttribute("panel-title") && !this.scrolled) {
 			setTimeout(() => {
 				panelTitle.style.opacity = "1";
 				panelTitleContent.innerHTML = this.getAttribute("panel-title") || "";
@@ -104,6 +120,10 @@ export class Panel extends HTMLElement {
 
 			this.render();
 		}
+	}
+
+	disconnectedCallback() {
+		this.scrolledSubscription?.unsubscribe();
 	}
 }
 
