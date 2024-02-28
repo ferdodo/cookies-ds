@@ -3,15 +3,8 @@
 		display: inline-block;
 	}
 
-	button {
-		font-family: ds-notes-sans;
-		font-size: 1rem;
-		display: grid;
-		place-content: center;
-	}
-
 	@media screen and (min-width: 800px) {
-		button {
+		.custom-btn {
 			font-size: 1.4rem;
 		}
 	}
@@ -19,6 +12,10 @@
 	/* ❤️ https://codepen.io/yuhomyan/pen/OJMejWJ */
 
 	.custom-btn {
+	  font-family: ds-notes-sans;
+	  font-size: 1rem;
+	  display: grid;
+	  place-content: center;
 	  border-radius: 5px;
 	  padding: 10px 25px;
 	  font-weight: 500;
@@ -30,6 +27,7 @@
 	   7px 7px 20px 0px rgba(0,0,0,.1),
 	   4px 4px 5px 0px rgba(0,0,0,.1);
 	  outline: none;
+	  grid-area: 2 / 2 / 3 / 3;
 	}
 
 	.btn-16 {
@@ -62,12 +60,34 @@
 	  top: 2px;
 	}
 
+	.button-container {
+		/*padding: 0.4rem;*/
+		display: grid;
+		grid-template-columns: 0.4rem 1fr 0.4rem;
+		grid-template-rows: 0.4rem 1fr 0.4rem; 
+	}
+
+
+.progress-container {
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+#progress {
+	background-color: #fff3;
+	height: 100%;
+	width: 0%;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
 
 </style>
 
 
-<div style="padding: 0.4rem">
-	<button class="custom-btn btn-16">
+<div class="button-container">
+	<div class="custom-btn btn-16">
 		<slot></slot>
-	</button>
+	</div>
+	<div class="progress-container">
+		<div id="progress"></div>
+	</div>
 </div>

@@ -7,7 +7,10 @@ import { acquireAnimationLock } from "../../utils/animation-lock.js";
 declare global {
 	export namespace JSX {
 		export interface IntrinsicElements {
-			"cookies-panel": {};
+			"cookies-panel": {
+				loading?: String;
+				"panel-title"?: String;
+			};
 		}
 	}
 }
