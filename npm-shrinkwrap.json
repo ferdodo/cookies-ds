@@ -1,15 +1,16 @@
 {
 	"name": "cookies-ds",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"lockfileVersion": 2,
 	"requires": true,
 	"packages": {
 		"": {
 			"name": "cookies-ds",
-			"version": "1.4.0",
+			"version": "1.4.1",
 			"license": "MIT",
 			"dependencies": {
-				"async-mutex": "^0.4.0"
+				"async-mutex": "^0.4.0",
+				"rxjs": "^7.8.1"
 			},
 			"devDependencies": {
 				"@html-eslint/eslint-plugin": "^0.22.0",
@@ -22,7 +23,6 @@
 				"eslint": "^8.56.0",
 				"eslint-plugin-rxjs": "^5.0.3",
 				"nodemon": "^3.0.1",
-				"rxjs": "^7.8.0",
 				"typescript": "^4.9.4",
 				"zx": "^7.1.1",
 				"zx-run-task": "^1.0.2"
@@ -3131,10 +3131,9 @@
 			}
 		},
 		"node_modules/rxjs": {
-			"version": "7.8.0",
-			"resolved": "https://registry.npmjs.org/rxjs/-/rxjs-7.8.0.tgz",
-			"integrity": "sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==",
-			"dev": true,
+			"version": "7.8.1",
+			"resolved": "https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz",
+			"integrity": "sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==",
 			"dependencies": {
 				"tslib": "^2.1.0"
 			}
@@ -6778,10 +6777,9 @@
 			}
 		},
 		"rxjs": {
-			"version": "7.8.0",
-			"resolved": "https://registry.npmjs.org/rxjs/-/rxjs-7.8.0.tgz",
-			"integrity": "sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==",
-			"dev": true,
+			"version": "7.8.1",
+			"resolved": "https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz",
+			"integrity": "sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==",
 			"requires": {
 				"tslib": "^2.1.0"
 			}
